@@ -2,6 +2,17 @@
 
 A template for Python projects.
 
+```
+├── .github/workflows/ci.yml   # GitHub Actions CI
+├── .pre-commit-config.yaml     # pre-commit hook configuration
+├── pyproject.toml              # project metadata, dependencies, tool config
+├── uv.lock                     # locked dependency versions
+├── src/
+│   └── main.py                 # application entry point
+└── tests/
+    └── test_placeholder.py     # example test
+```
+
 ## Setup
 
 ```sh
@@ -15,7 +26,7 @@ uv run pre-commit install
 uv run src/main.py
 ```
 
-## Project structure
+## Multi-package projects
 
 For projects with multiple packages, create a folder per package under `src/` and
 mirror the structure in `tests/`:
