@@ -15,8 +15,14 @@
 
 ## Setup
 
+If your project requires environment variables:
+
 ```sh
-cp .env.example .env  # then fill in values
+cp .env.example .env  # then fill in required values
+uv add python-dotenv
+```
+
+```sh
 uv sync
 uv run pre-commit install
 ```
