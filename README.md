@@ -9,6 +9,7 @@
 ├── uv.lock                     # locked dependency versions
 ├── src/
 │   └── main.py                 # application entry point
+│   └── settings.py             # optional - handle .env
 └── tests/
     └── test_placeholder.py     # example test
 ```
@@ -22,17 +23,7 @@ uv run pre-commit install
 
 ## Environment variables
 
-A `.env.example` file is included for documenting required variables, update for your project. For loading
-`.env` files at runtime:
-
-| Scenario | Library | File Structure |
-| :--- | :--- | :--- |
-| **Small script, no Pydantic** | `python-dotenv` | Call `load_dotenv()` inline at the top of `main.py`. |
-| **Small script, has Pydantic** | `pydantic-settings`| Define and instantiate `Settings()` inline in `main.py`. |
-| **Large app, no Pydantic** | `python-dotenv` | Load `os.environ` into a centralized `settings.py` file using a dictionary or dataclass. |
-| **Large app, has Pydantic** | `pydantic-settings`| Define and instantiate `Settings()` as a single source of truth in `settings.py`. |
-- [python-dotenv](https://github.com/theskumar/python-dotenv)
-- [pydantic-settings](https://docs.pydantic.dev/latest/concepts/pydantic_settings/)
+A `.env.example` file is included for documenting required variables, update for your project. See [here](https://github.com/frontierasset/policy-documentation/blob/main/python-dev-guide.md#environment-variables) for best practices around loading `.env` files at runtime.
 
 ## Usage
 
