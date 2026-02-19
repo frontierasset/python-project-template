@@ -17,7 +17,7 @@ uv run src/main.py
 
 ## Project structure
 
-For projects with multiple sub-modules, create a folder per module under `src/` and
+For projects with multiple packages, create a folder per package under `src/` and
 mirror the structure in `tests/`:
 
 ```
@@ -46,7 +46,7 @@ tests/
     └── test_helpers.py
 ```
 
-Each sub-module under `src/` needs an `__init__.py` to be importable as a package
+Each package under `src/` needs an `__init__.py` to be importable
 (e.g. `from api.routes import ...`). Test directories don't need `__init__.py` — pytest
 discovers them automatically.
 
