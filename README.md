@@ -1,7 +1,5 @@
 # python-project-template
 
-A template for Python projects.
-
 ```
 ├── .github/workflows/ci.yml   # GitHub Actions CI
 ├── .gitignore                  # files excluded from git
@@ -27,7 +25,7 @@ uv run pre-commit install
 uv run src/main.py
 ```
 
-## Multi-package projects
+## Multi-Package Projects
 
 For projects with multiple packages, create a folder per package under `src/` and
 mirror the structure in `tests/`:
