@@ -83,11 +83,14 @@ To run all hooks manually against every file:
 uv run pre-commit run --all-files
 ```
 
-Periodically update hook versions with:
+Ruff and pyright run as local hooks via `uv run`, so they use the exact versions
+pinned in `uv.lock`. This avoids version drift between pre-commit and your dev
+environment — the same tool version runs everywhere (locally, in hooks, and in CI).
+Update them with `uv lock --upgrade`.
 
-```sh
-uv run pre-commit autoupdate
-```
+The file-hygiene hooks (trailing-whitespace, etc.) are external since they're
+lightweight and don't overlap with anything in the project's dependencies. Update
+them with `uv run pre-commit autoupdate`.
 
 ## CI
 

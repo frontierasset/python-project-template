@@ -1,11 +1,4 @@
 repos:
-  - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.15.1
-    hooks:
-      - id: ruff-check
-        args: [--fix]
-      - id: ruff-format
-
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v5.0.0
     hooks:
@@ -15,7 +8,21 @@ repos:
       - id: check-toml
       - id: check-yaml
 
-  - repo: https://github.com/RobertCraigie/pyright-python
-    rev: v1.1.408
+  - repo: local
     hooks:
+      - id: ruff-check
+        name: ruff-check
+        entry: uv run ruff check --fix
+        language: system
+        types: [python]
+      - id: ruff-format
+        name: ruff-format
+        entry: uv run ruff format
+        language: system
+        types: [python]
       - id: pyright
+        name: pyright
+        entry: uv run pyright
+        language: system
+        types: [python]
+        pass_filenames: false
