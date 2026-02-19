@@ -2,6 +2,7 @@
 
 ```
 ├── .github/workflows/ci.yml   # GitHub Actions CI
+├── .env.example                # template for environment variables
 ├── .gitignore                  # files excluded from git
 ├── .pre-commit-config.yaml     # pre-commit hook configuration
 ├── pyproject.toml              # project metadata, dependencies, tool config
@@ -15,6 +16,7 @@
 ## Setup
 
 ```sh
+cp .env.example .env  # then fill in values
 uv sync
 uv run pre-commit install
 ```
