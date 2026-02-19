@@ -72,6 +72,8 @@ The following hooks are configured:
 - **ruff-format** — enforces consistent formatting
 - **trailing-whitespace** — removes trailing whitespace
 - **end-of-file-fixer** — ensures files end with a newline
+- **check-json** — validates JSON syntax
+- **check-toml** — validates TOML syntax
 - **check-yaml** — validates YAML syntax
 - **pyright** — type checks
 
