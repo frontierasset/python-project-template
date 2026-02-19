@@ -1,0 +1,23 @@
+[project]
+name = "python-project-template"
+version = "0.0.1"
+description = "A template for Python projects"
+requires-python = ">=3.14"
+
+[dependency-groups]
+dev = ["pre-commit", "pyright", "pytest", "pytest-cov", "ruff"]
+
+[tool.ruff]
+src = ["src"]
+target-version = "py314"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "C4", "PTH", "RUF"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--cov=src --cov-report=term-missing"
+
+[tool.pyright]
+pythonVersion = "3.14"
+include = ["src", "tests"]
