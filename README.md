@@ -68,7 +68,7 @@ Ruff is configured with the following lint rule sets:
 Pre-commit hooks run automatically on `git commit` to catch issues before they reach CI.
 The following hooks are configured:
 
-- **ruff-check** — lints and auto-sorts imports (`--select I --fix`)
+- **ruff-check** — lints and auto-fixes (uses rules from pyproject.toml)
 - **ruff-format** — enforces consistent formatting
 - **trailing-whitespace** — removes trailing whitespace
 - **end-of-file-fixer** — ensures files end with a newline
