@@ -12,7 +12,7 @@ src = ["src"]
 target-version = "py314"
 
 [tool.ruff.lint]
-select = ["E", "F", "I", "UP", "B", "C4", "PTH", "RUF"]
+select = ["B", "C4", "E", "F", "I", "PTH", "RUF", "UP"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
