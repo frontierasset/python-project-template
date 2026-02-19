@@ -25,8 +25,14 @@ uv run pre-commit install
 A `.env.example` file is included for documenting required variables, update for your project. For loading
 `.env` files at runtime:
 
-- [python-dotenv](https://github.com/theskumar/python-dotenv) — lightweight, no other dependencies
-- [pydantic-settings](https://docs.pydantic.dev/latest/concepts/pydantic_settings/) — typed and validated, use this if your project already depends on pydantic
+| Scenario | Library | File Structure |
+| :--- | :--- | :--- |
+| **Small script, no Pydantic** | `python-dotenv` | Call `load_dotenv()` inline at the top of `main.py`. |
+| **Small script, has Pydantic** | `pydantic-settings`| Define and instantiate `Settings()` inline in `main.py`. |
+| **Large app, no Pydantic** | `python-dotenv` | Load `os.environ` into a centralized `settings.py` file using a dictionary or dataclass. |
+| **Large app, has Pydantic** | `pydantic-settings`| Define and instantiate `Settings()` as a single source of truth in `settings.py`. |
+- [python-dotenv](https://github.com/theskumar/python-dotenv)
+- [pydantic-settings](https://docs.pydantic.dev/latest/concepts/pydantic_settings/)
 
 ## Usage
 
