@@ -1,7 +1,7 @@
 # python-project-template
 
 ```
-├── .github/workflows/ci.yml   # GitHub Actions CI
+├── .github/workflows/ci.yml    # GitHub Actions CI
 ├── .env.example                # template for environment variables
 ├── .gitignore                  # files excluded from git
 ├── .pre-commit-config.yaml     # pre-commit hook configuration
