@@ -22,6 +22,8 @@ cp .env.example .env  # then fill in required values
 uv add python-dotenv
 ```
 
+Always after cloning:
+
 ```sh
 uv sync
 uv run pre-commit install
