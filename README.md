@@ -4,6 +4,7 @@ A template for Python projects.
 
 ```
 ├── .github/workflows/ci.yml   # GitHub Actions CI
+├── .gitignore                  # files excluded from git
 ├── .pre-commit-config.yaml     # pre-commit hook configuration
 ├── pyproject.toml              # project metadata, dependencies, tool config
 ├── uv.lock                     # locked dependency versions
