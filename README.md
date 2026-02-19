@@ -9,7 +9,6 @@
 ├── uv.lock                     # locked dependency versions
 ├── src/
 │   └── main.py                 # application entry point
-│   └── settings.py             # optional - handle .env
 └── tests/
     └── test_placeholder.py     # example test
 ```
