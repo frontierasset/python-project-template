@@ -20,12 +20,13 @@ uv sync
 uv run pre-commit install
 ```
 
-If your project requires environment variables:
+## Environment variables
 
-```sh
-cp .env.example .env  # then fill in required values
-uv add python-dotenv
-```
+A `.env.example` file is included for documenting required variables, update for your project. For loading
+`.env` files at runtime:
+
+- [python-dotenv](https://github.com/theskumar/python-dotenv) — lightweight, no other dependencies
+- [pydantic-settings](https://docs.pydantic.dev/latest/concepts/pydantic_settings/) — typed and validated, use this if your project already depends on pydantic
 
 ## Usage
 
